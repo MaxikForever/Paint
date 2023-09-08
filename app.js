@@ -118,3 +118,34 @@ const drawCircle = (e) => {
   })
 
 
+window.addEventListener("resize", () => {
+    if(window.innerWidth <= 1100) {
+      tools.forEach(tool => {
+        const smallElement = tool.parentNode.querySelector("small");
+        if(smallElement) {
+        smallElement.style.display = "none";
+        }
+        
+      })
+    }
+    else {
+   
+      tools.forEach(tool => {
+        const smallElement = tool.parentNode.querySelector("small");
+        if(smallElement) {
+        smallElement.style.display = "block";
+        }
+
+    })
+}
+})
+
+
+if(window.innerWidth <= 1100) {
+  tools.forEach(tool => {
+    const smallElement = tool.parentNode.querySelector("small");
+    if(smallElement) {
+    smallElement.style.display = "none";
+    }
+    
+  })}

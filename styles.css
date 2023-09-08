@@ -52,6 +52,8 @@
 
   header {
     height: 100px;
+    width: 100vw;
+    margin: 0 auto;
     background-color: var(--bgColor);
     border-radius: 0 0 10px 10px;
   }
@@ -73,6 +75,7 @@
   
   .tools {
     height: 100%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,6 +87,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 90%;
   }
   
   .tool {
@@ -105,7 +109,6 @@
    */
 
   .tool label {
-    min-width: 100px;
     padding: 10px 15px;
     height: 50px;
     border-radius: 10px;
@@ -159,7 +162,7 @@
   }
 
   .option {
-    min-width: 150px;
+    width: 150px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -240,8 +243,9 @@
 
 
   #canvas {
-    height: 700px;
-    width: 1200px;
+    max-width: 1280px;
+    height: 70vh;
+    width: 85vw;
     border: 3px solid var(--bgColor);
     display: block;
     margin: 50px auto;
@@ -254,13 +258,13 @@
     position: absolute;
     bottom: 0;
     right: 0;
+        width: 100vw;
+    z-index: -2;
   }
 
 
-  .waves,
   .waves img {
-    width: 100vw;
-    z-index: -2;
+    width: 100%;
   }
 
 .animatedButton {
@@ -275,4 +279,56 @@
   100% {
     transform: scale(1.13);
   }
+}
+
+@media (max-width: 1340px) {
+  .tool label small{
+    font-size: 14px;
+  }
+  .tool label {
+    max-width: 100px;
+    padding: 7px 3px;
+    gap: 2px;
+  }
+
+  .options {
+    gap: 8px;
+  }
+
+  .menu__content {
+    gap: 10px ;
+  }
+
+  .option {
+    width: 100px;
+  }
+
+
+  
+}
+
+
+@media (max-width: 960px) {
+  .option button,
+  .option input[type="color"] {
+    font-size: 0.8rem;
+   }
+
+   .tool label {
+    min-width: 33px;
+   }
+   .option {
+    width: 60px;
+   }
+}
+
+@media (max-width: 560px) {
+
+  .option[attribute="color"] {
+  width: 30px;
+ }
+
+ .menu__content {
+  justify-content: space-evenly;
+ }
 }
